@@ -1,11 +1,12 @@
-import Effect from "./hooks/useEffect/Effect";
+import React, { useContext } from 'react'
+import { AppContext } from './hooks/useContext/ContextTest'
 
-
-
-function App() {
-  return <>
-    <Effect />
-  </>;
+const App = () => {
+  const {count} = useContext(AppContext)
+  alert(count)
+  return (
+    <div>App</div>
+  )
 }
 
-export default App;
+export default App
